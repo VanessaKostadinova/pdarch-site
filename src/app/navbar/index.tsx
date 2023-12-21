@@ -2,7 +2,7 @@
 import React, {useState} from "react"
 import Link from "next/link"
 
-const Navbar = () => {
+export default function Navbar() {
     type NavLink = {
         title: string,
         href: string
@@ -28,4 +28,3 @@ const Navbar = () => {
         </nav>
     )
 }
-export default Navbar

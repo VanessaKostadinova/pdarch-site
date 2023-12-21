@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-const Carousel = () => {
+export default function Carousel() {
     type Image = {
         src: string,
         alt: string
@@ -91,5 +91,3 @@ const Carousel = () => {
         </div>
     )
 }
-
-export default Carousel
