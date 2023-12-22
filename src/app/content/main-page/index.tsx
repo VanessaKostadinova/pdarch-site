@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function MainContent() {
     return (
-        <div className='my-28 mx-96'>
+        <div className=''>
             <p>
                 Lorem ipsum dolor sit amet. Est dignissimos maiores ut nobis cumque qui quis cumque. Sed fugit illo ex officiis enim ea illo modi hic dolorem dolorem.
                 At vitae accusamus a error aperiam qui rerum Quis rem nisi voluptatum. Et dignissimos minus ad quae illum ut molestias sint ea soluta reiciendis quo nihil quia quo veritatis quas. Est inventore alias aut ipsum consequatur ea libero magni et nostrum nesciunt id harum officia sed recusandae consequatur aut inventore molestiae. Id dolores explicabo sit repellendus magnam qui necessitatibus cupiditate rem internos modi ut amet laudantium qui accusamus omnis sit quae nihil.

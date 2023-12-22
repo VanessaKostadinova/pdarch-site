@@ -15,15 +15,20 @@ export default function Navbar() {
     ];
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <nav className="bg-gray-800 p-4">
-            <ul className="flex flex-col md:flex-row">
-                {navLinks.map((link, index) => (
-                    <li key={index} className="md:mr-6">
-                        <Link href={link.href} className="text-white hover:text-gray-300">
-                            {link.title}
-                        </Link>
-                    </li>
-                ))}
+        <nav className="">
+            <ul className="flex flex-row justify-between">
+                <div>
+                    <img src="https://placehold.co/100x50/FFFFFF/000" />
+                </div>
+                <div className="flex flex-col items-end md:flex-row md:justify-end">
+                    {navLinks.map((link, index) => (
+                        <li key={index} className="m-4 md:ml-6">
+                            <Link href={link.href} className="text-white hover:text-gray-300">
+                                {link.title}
+                            </Link>
+                        </li>
+                    ))}
+                </div>
             </ul>
         </nav>
     )
