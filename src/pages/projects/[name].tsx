@@ -6,18 +6,20 @@ import '@/app/globals.css'
 
 type PropContent = {
   title: string;
+  carouselImages: {src: string, alt: string}[]
 }
 
 export default function Page( props: PropContent) {
     const router = useRouter();
-    const images= [
+    const images = [
       {src: "https://placehold.co/600x400/000000/FFF", alt: "/"},
       {src: "https://placehold.co/600x400/555555/FFF", alt: "/about"},
       {src: "https://placehold.co/600x400/FFFFFF/000", alt: "/contact"}
   ];
+  console.log(props)
     return (
       <main>
-        <Carousel images={ images }></Carousel>
+        <Carousel images={ props.carouselImages }></Carousel>
         <p>Post: { props.title }</p>
       </main>
     )
