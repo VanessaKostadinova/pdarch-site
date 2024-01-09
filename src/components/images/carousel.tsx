@@ -26,7 +26,7 @@ export default function Carousel(props: {images: Image[]}) {
         setCurrentIndex(newIndex);
     }, [currentIndex, images.length]);
 
-    function setIndex = useCallback((newIndex: number) => {
+    const setIndex = useCallback((newIndex: number) => {
         if (currentIndex > newIndex) {
             setDirection(-1);
         } else if (currentIndex === newIndex){
