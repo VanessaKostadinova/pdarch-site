@@ -1,15 +1,14 @@
 "use client"
 import React, { useState } from 'react';
-export default function Carousel() {
-    type Image = {
-        src: string,
-        alt: string
-    };
-    const images: Image[] = [
-        {src: "https://placehold.co/600x400/000000/FFF", alt: "/"},
-        {src: "https://placehold.co/600x400/555555/FFF", alt: "/about"},
-        {src: "https://placehold.co/600x400/FFFFFF/000", alt: "/contact"}
-    ];
+
+type Image = {
+    src: string,
+    alt: string
+};
+
+export default function Carousel(props: {images: Image[]}) {
+    const images: Image[] = props.images;
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [previousIndex, setPreviousIndex] = useState(0);
     const [direction, setDirection] = useState(0);
