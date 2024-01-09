@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 type Image = {
     src: string,
@@ -13,8 +13,7 @@ export default function Carousel(props: {images: Image[]}) {
     const [previousIndex, setPreviousIndex] = useState(0);
     const [direction, setDirection] = useState(0);
 
-
-    function transition(direction: string): void {
+    const transition = useCallback((direction: string) => {
         let newIndex;
         if (direction === "forwards") {
             newIndex = (currentIndex + 1) % images.length;
@@ -25,9 +24,9 @@ export default function Carousel(props: {images: Image[]}) {
         }
         setPreviousIndex(currentIndex);
         setCurrentIndex(newIndex);
-    };
+    }, [currentIndex, images.length]);
 
-    function setIndex(newIndex: number): void {
+    function setIndex = useCallback((newIndex: number) => {
         if (currentIndex > newIndex) {
             setDirection(-1);
         } else if (currentIndex === newIndex){
@@ -37,7 +36,7 @@ export default function Carousel(props: {images: Image[]}) {
         }
         setPreviousIndex(currentIndex);
         setCurrentIndex(newIndex);
-    }
+    }, [currentIndex])
 
     function classCalculator(index: number): string {
         let classBuilder = "";
@@ -56,19 +55,24 @@ export default function Carousel(props: {images: Image[]}) {
         }
         return classBuilder
     }
+    // this pre-calculates the classes for each state, optimising the running
+    const classCalculations = useMemo(() => 
+        images.map((_, index) => classCalculator(index)),
+        [currentIndex, previousIndex, direction]
+    );
 
-    return(
+    return (
         <div id="default-carousel" className="relative w-full" data-carousel="slide">
             <div className="relative h-96 overflow-hidden md:h-96">
                 {images.map((image, index) => (
-                    <li key={index} className={`absolute ${classCalculator(index)} top-0 w-full h-full`} data-carousel-item>
+                    <li key={index} className={`absolute ${classCalculations[index]} top-0 w-full h-full`} data-carousel-item>
                         <img src={image.src} className={`absolute w-full h-full object-cover`} alt={image.alt}/>
                     </li>
                 ))}
             </div>
             <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                 {images.map((image, index) => (
-                    <button onClick={()=>setIndex(index)} type="button" className={`block opacity-75 w-3 h-3 rounded-full ${index === currentIndex ? 'bg-gray-50' : 'bg-gray-500'}`} aria-current={index === currentIndex} aria-label={`Slide ${index}`} data-carousel-slide-to={index}></button>
+                    <button key={index} onClick={()=>setIndex(index)} type="button" className={`block opacity-75 w-3 h-3 rounded-full ${index === currentIndex ? 'bg-gray-50' : 'bg-gray-500'}`} aria-current={index === currentIndex} aria-label={`Slide ${index}`} data-carousel-slide-to={index}></button>
                 ))}
             </div>
             <button onClick={()=>transition("backwards")} type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
