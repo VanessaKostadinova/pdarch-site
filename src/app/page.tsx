@@ -2,7 +2,7 @@ import LandingImage from '@/components/images/landing'
 import LandingGallery from '@/components/images/landing-gallery'
 import AboutMe from '@/components/main-page/about-me'
 import ContactUs from '@/components/main-page/contact-us'
-import LandingPhilosophy from '@/components/main-page/landing-philosophy'
+import Philosophy from '@/components/main-page/philisophy'
 import Title from '@/components/main-page/title'
 import Navbar from '@/components/navbar'
 import Image from 'next/image'
@@ -17,7 +17,7 @@ export default function Home() {
           <LandingImage />
           <div className='grid grid-col-1 gap-20'>
             <LandingGallery />
-            <LandingPhilosophy />
+            <Philosophy />
             <AboutMe />
           </div>
         </div>

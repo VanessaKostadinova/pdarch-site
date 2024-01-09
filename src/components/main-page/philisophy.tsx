@@ -1,9 +1,9 @@
 "use client"
 
-import MainContent from ".."
-import SubTitle from "../heading"
+import MainContent from "./text-content"
+import SubTitle from "./sub-title"
 
-export default function LandingPhilosophy() {
+export default function Philosophy() {
     return (
         <div>
             <div>

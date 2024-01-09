@@ -1,7 +1,7 @@
 "use client"
 import React, {useState} from "react"
 import Link from "next/link"
-import SubTitle from "../heading"
+import SubTitle from "./sub-title"
 
 export default function AboutMe() {
     return (

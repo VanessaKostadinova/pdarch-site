@@ -2,7 +2,7 @@
 import React, {useState} from "react"
 import { useRouter } from 'next/navigation'
 import Link from "next/link"
-import SubTitle from "../heading"
+import SubTitle from "./sub-title"
 
 export default function ContactUs() {
     const router = useRouter();

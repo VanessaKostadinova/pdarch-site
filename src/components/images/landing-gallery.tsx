@@ -1,4 +1,4 @@
-import SubTitle from "@/components/main-page/heading";
+import SubTitle from "../main-page/sub-title";
 
 export default function LandingGallery() {
     return (
