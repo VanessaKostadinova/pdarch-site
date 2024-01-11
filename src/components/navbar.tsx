@@ -15,7 +15,7 @@ export default function Navbar() {
     ];
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="w-full top-0 min-h-min bg-black fixed z-50">
+        <nav className="w-full flex flex-col items-center top-0 min-h-min bg-black fixed z-50">
             <div className="min-h-14 md:h-20 w-full md:w-4/5 lg:w-2/3 xl:w-1/2 px-4 md:px-0">
                 <ul className="h-full flex flex-row align-center justify-between">
                     <div className="h-full">
@@ -28,13 +28,15 @@ export default function Navbar() {
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                             </svg>
                         </button>
-                        {navLinks.map((link, index) => (
-                            <li key={index} className={`${isOpen ? '' : 'hidden'}`}>
-                                <Link href={link.href} className="text-white hover:text-gray-300">
-                                    {link.title}
-                                </Link>
-                            </li> 
-                        ))}
+                        <div className={`${isOpen ? 'flex' : 'hidden md:flex'} flex-col gap-4 items-end md:items-center md:flex-row md:gap-6 justify-end pb-4 md:p-0`}>
+                            {navLinks.map((link, index) => (
+                                <li key={index}>
+                                    <Link href={link.href} className="text-white hover:text-gray-300">
+                                        {link.title}
+                                    </Link>
+                                </li> 
+                            ))}
+                        </div>
                     </div>
                 </ul>
             </div>

@@ -21,8 +21,8 @@ export default function Page(props: PropContent) {
   return (
     <main className='bg-black pt-14 md:pt-20'>
       <div className="flex flex-col items-center mb-5">
-        <div className='w-full md:w-4/5 lg:w-2/3 xl:w-1/2'>
           <Navbar />
+          <div className='w-full md:w-4/5 lg:w-2/3 xl:w-1/2'>
           <div className="absolute z-10">
             <div className="my-20 px-4 md:px-0">
               <h1 className="text-white uppercase text-6xl my-3">{props.title}</h1>
