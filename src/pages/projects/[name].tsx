@@ -10,7 +10,8 @@ import './projects.css';
 type PropContent = {
   title: string;
   subtitle: string;
-  carouselImages: { src: string, alt: string }[]
+  carouselImages: { src: string, alt: string }[],
+  galleryBackgroundImage: {src: string, alt: string}
 }
 
 export default function Page(props: PropContent) {
@@ -80,7 +81,7 @@ export default function Page(props: PropContent) {
           <div className="absolute z-10">
             <h1 className="text-black uppercase text-9xl my-3">Gallery</h1>
           </div>
-          <img className="zoomed-image" src="https://placehold.co/600x840/FFFFFF/000" />
+          <img className="zoomed-image" src={props.galleryBackgroundImage.src} />
         </div>
         <div className='grid grid-cols-2'>
           <div className='w-full'>
