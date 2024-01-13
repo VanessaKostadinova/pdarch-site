@@ -79,7 +79,7 @@ export default function Page(props: PropContent) {
         </div>
         <div className='w-full flex items-center flex-shrink justify-center overflow-hidden h-[20vh] md:h-[30vh]'>
           <div className="absolute z-10">
-            <h1 className="text-black bg-white bg-opacity-50 uppercase text-7xl md:text-9xl my-3">Gallery</h1>
+            <h1 className="text-white bg-black bg-opacity-50 uppercase text-7xl md:text-9xl my-3">Gallery</h1>
           </div>
           <img className="zoomed-image" src={props.galleryBackgroundImage.src} />
         </div>
@@ -99,10 +99,11 @@ export default function Page(props: PropContent) {
 
               <div className='flex w-full flex-col gap-4 md:gap-5'>
                 <div className='w-full'>
-                  <img className="zoomed-image" src="https://ralphplastering.co.uk/wp-content/uploads/2019/11/IMG_7514-1024x683.jpg" />
+                  <img className="zoomed-image" src="https://www.jub.org.uk/wp-content/uploads/2019/05/IMG_1670.png" />
                 </div>
                 <div className='w-full'>
-                  <img className="zoomed-image" src="https://www.jub.org.uk/wp-content/uploads/2019/05/IMG_1670.png" />
+                  <img className="zoomed-image" src="https://ralphplastering.co.uk/wp-content/uploads/2019/11/IMG_7514-1024x683.jpg" />
+
                 </div>
               </div>
             </div>
