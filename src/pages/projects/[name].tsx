@@ -6,18 +6,21 @@ import Navbar from '@/components/navbar';
 import { EmblaCarousel } from '@/components/images/carousel/embla-carousel';
 import SubTitle from '@/components/main-page/sub-title';
 import './projects.css';
+import GridParent from '@/components/text/text-grid/grid-parent';
+import { GridItemType } from '@/components/text/text-grid/grid-types';
+import { WidthDiv } from '@/components/helper/width-div';
 
 type PropContent = {
   title: string;
   subtitle: string;
   carouselImages: { src: string, alt: string }[],
-  galleryBackgroundImage: { src: string, alt: string }
+  galleryBackgroundImage: { src: string, alt: string },
+  gridItems: GridItemType[]
 }
 
 export default function Page(props: PropContent) {
   const router = useRouter();
 
-  console.log(props)
   return (
     <main className='bg-black pt-14 md:pt-20'>
       <div className="flex flex-col items-center mb-5">
@@ -30,10 +33,10 @@ export default function Page(props: PropContent) {
             </div>
           </div>
         </div>
-        <div className='h-[calc(100vh-10rem)]'>
+        <div className='h-[calc(100vh-10rem)] flex flex-col items-center'>
           <EmblaCarousel images={props.carouselImages} />
         </div>
-        <div className='my-5 w-full md:w-4/5 lg:w-2/3 xl:w-1/2 px-4 md:px-0'>
+        <WidthDiv>
           <div className='flex gap-5 flex-col justify-between md:flex-row'>
             <div className='flex flex-col md:w-2/5'>
               <h2 className="text-white text-5xl">SUMMARY</h2>
@@ -51,7 +54,12 @@ export default function Page(props: PropContent) {
               </p>
             </div>
           </div>
-        </div>
+        </WidthDiv>
+      </div>
+      <div className="flex flex-col items-center mb-5">
+        <WidthDiv>
+            <GridParent gridItems={props.gridItems} />
+        </WidthDiv>
       </div>
       <div className='flex flex-col gap-5 items-center w-full mb-5'>
         <div className='flex flex-col md:flex-row gap-5 md:items-center h-full w-full md:w-4/5 lg:w-2/3 xl:w-1/2'>
@@ -60,7 +68,7 @@ export default function Page(props: PropContent) {
               <img className="zoomed-image" src="https://rockcote.com.au/wp-content/uploads/2022/05/Coloured-Render-Image.jpg" />
             </div>
           </div>
-          <div className='flex flex-col gap-5 md:gap-32 md:w-3/5 px-4 md:px-0'>
+          <WidthDiv>
             <div>
               <h2 className="text-white text-5xl">DESIGN</h2>
               <p className='text-white text-justify'>
@@ -75,7 +83,7 @@ export default function Page(props: PropContent) {
                 At vitae accusamus a error aperiam qui rerum Quis rem nisi voluptatum. Et dignissimos minus ad quae illum ut molestias sint ea soluta reiciendis quo nihil quia quo veritatis quas.
               </p>
             </div>
-          </div>
+          </WidthDiv>
         </div>
         <div className='w-full flex items-center flex-shrink justify-center overflow-hidden h-[20vh] md:h-[30vh]'>
           <div className="absolute z-10">

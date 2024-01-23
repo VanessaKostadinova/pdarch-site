@@ -2,11 +2,55 @@
     "title": "house",
     "subtitle": "a brief description of this project",
     "carouselImages": [
-        {"src": "/projects/house1.jpg", "alt": "blackbg"},
-        {"src": "https://ralphplastering.co.uk/wp-content/uploads/2022/11/Rendering-3-1.png", "alt": "greybg"},
-        {"src": "https://advanced-painters.co.uk/wp-content/uploads/2021/12/property-rendering.jpeg", "alt": "whitebg"}
-        
+        {
+            "src": "/projects/house1.jpg",
+            "alt": "blackbg"
+        },
+        {
+            "src": "https://ralphplastering.co.uk/wp-content/uploads/2022/11/Rendering-3-1.png",
+            "alt": "greybg"
+        },
+        {
+            "src": "https://advanced-painters.co.uk/wp-content/uploads/2021/12/property-rendering.jpeg",
+            "alt": "whitebg"
+        },
+        {
+            "src": "https://advanced-painters.co.uk/wp-content/uploads/2021/12/property-rendering.jpeg",
+            "alt": "whitebg"
+        },
+        {
+            "src": "https://advanced-painters.co.uk/wp-content/uploads/2021/12/property-rendering.jpeg",
+            "alt": "whitebg"
+        }
     ],
-    "galleryBackgroundImage": {"src": "https://www.rendad.co.uk/wp-content/uploads/2022/02/IMG-20220208-WA0008-1.jpg", "alt": "whitebg"}
-    
+    "galleryBackgroundImage": {
+        "src": "https://www.rendad.co.uk/wp-content/uploads/2022/02/IMG-20220208-WA0008-1.jpg",
+        "alt": "whitebg"
+    },
+    "gridItems": [
+        {
+            "title": "Type",
+            "content": "just a house"
+        },
+        {
+            "title": "Status",
+            "content": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "title": "Client",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "title": "Location",
+            "content": "somewhere on earth"
+        },
+        {
+            "title": "Site",
+            "content": "plot-o-land"
+        },
+        {
+            "title": "Etc",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]
 }
