@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>
       <div className="bg-black flex flex-col items-center">
-        <div className='md:w-4/5 lg:w-2/3 xl:w-1/2 px-4'>
-          <Navbar />
+      <Navbar />
+        <div className='md:w-4/5 lg:w-2/3 xl:w-1/2 px-4 md:px-0'>
           <Title />
           <LandingImage />
           <div className='grid grid-col-1 gap-20'>
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-white flex flex-col items-center">
-        <div className='md:w-4/5 lg:w-2/3 xl:w-1/2 px-4'>
+        <div className='md:w-4/5 lg:w-2/3 xl:w-1/2 px-4 md:px-0'>
           <ContactUs />
         </div>
       </div>
